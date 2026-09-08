@@ -1,4 +1,4 @@
-package com.fundamentalos.forge;
+package org.fundamentalos.forge;
 
 import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyProperties;

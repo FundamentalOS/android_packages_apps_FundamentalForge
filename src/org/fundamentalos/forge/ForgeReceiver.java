@@ -1,4 +1,4 @@
-package com.fundamentalos.forge;
+package org.fundamentalos.forge;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -7,8 +7,8 @@ import android.util.Log;
 
 /**
  * Entry point for a keybox fetch. Triggerable for testing via:
- *   adb shell am broadcast -a com.fundamentalos.forge.FETCH \
- *       -n com.fundamentalos.forge/.ForgeReceiver
+ *   adb shell am broadcast -a org.fundamentalos.forge.FETCH \
+ *       -n org.fundamentalos.forge/.ForgeReceiver
  * and on BOOT_COMPLETED (which schedules the daily 00:00 UTC job).
  */
 public class ForgeReceiver extends BroadcastReceiver {

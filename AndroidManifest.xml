@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.fundamentalos.forge"
+    package="org.fundamentalos.forge"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -15,16 +15,16 @@
         android:directBootAware="true">
 
         <receiver
-            android:name="com.fundamentalos.forge.ForgeReceiver"
+            android:name="org.fundamentalos.forge.ForgeReceiver"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.fundamentalos.forge.FETCH" />
+                <action android:name="org.fundamentalos.forge.FETCH" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
         <service
-            android:name="com.fundamentalos.forge.ForgeJobService"
+            android:name="org.fundamentalos.forge.ForgeJobService"
             android:permission="android.permission.BIND_JOB_SERVICE"
             android:exported="true" />
     </application>
