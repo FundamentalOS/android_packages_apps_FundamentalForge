@@ -18,6 +18,9 @@ public class ForgeReceiver extends BroadcastReceiver {
         Log.i(ForgeClient.TAG, "ForgeReceiver: " + action);
         if (Intent.ACTION_BOOT_COMPLETED.equals(action)) {
             ForgeScheduler.scheduleDaily(ctx);
+            // Proactively fetch a keybox when we have none yet (the job enforces online +
+            // non-power-save). Targets/appcompat are reconciled by Settings on boot.
+            ForgeScheduler.scheduleProactiveIfNeeded(ctx);
             return;
         }
         // FETCH (manual/test): run off the main thread
